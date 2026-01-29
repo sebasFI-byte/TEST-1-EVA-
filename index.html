@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon ASCII Transcoder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <p class="kicker">Neon Signal</p>
+      <h1>ASCII Image Generator</h1>
+      <p class="subtitle">Feed the grid. Watch words burn into pixels.</p>
+    </header>
+
+    <section class="panel">
+      <div class="input-area">
+        <label for="text-input">Input phrase</label>
+        <textarea id="text-input" rows="4" placeholder="Type your message..."></textarea>
+        <div class="controls">
+          <label>
+            Density
+            <input id="density" type="range" min="6" max="20" value="12" />
+          </label>
+          <label>
+            Glow
+            <input id="glow" type="range" min="0" max="24" value="12" />
+          </label>
+        </div>
+      </div>
+
+      <div class="output-area">
+        <div class="output-header">
+          <span>ASCII Render</span>
+          <button id="copy" type="button">Copy</button>
+        </div>
+        <pre id="ascii-output" aria-live="polite"></pre>
+      </div>
+    </section>
+  </div>
+
+  <canvas id="ascii-canvas" width="480" height="200" aria-hidden="true"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
